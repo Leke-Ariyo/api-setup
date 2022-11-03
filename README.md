@@ -66,18 +66,18 @@ N.B: If your host ip is not in allowed host env, probes may fail
 
 <div align="center">
   <a href="/">
-    <img src="https://res.cloudinary.com/dtvv1oyyj/image/upload/v1667501093/Screenshot_from_2022-11-03_19-39-06.png" width="240"/>
+    <img src="https://res.cloudinary.com/dtvv1oyyj/image/upload/v1667501093/Screenshot_from_2022-11-03_19-39-06.png" width="640"/>
   </a>
 </div>
 
 <div align="center">
   <a href="/">
-    <img src="https://res.cloudinary.com/dtvv1oyyj/image/upload/v1667501088/Screenshot_from_2022-11-03_19-39-33.png" width="240"/>
+    <img src="https://res.cloudinary.com/dtvv1oyyj/image/upload/v1667501088/Screenshot_from_2022-11-03_19-39-33.png" width="640"/>
   </a>
 </div>
 
 <div align="center">
   <a href="/">
-    <img src="https://res.cloudinary.com/dtvv1oyyj/image/upload/v1667501077/Screenshot_from_2022-11-03_19-40-01.png" width="240"/>
+    <img src="https://res.cloudinary.com/dtvv1oyyj/image/upload/v1667501077/Screenshot_from_2022-11-03_19-40-01.png" width="640"/>
   </a>
 </div>
