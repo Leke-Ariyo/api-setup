@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: scratch-pay
+  name: scratch-pay
+  namespace: minor
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: scratch-pay
+  template:
+    metadata:
+      labels:
+        app: scratch-pay
+    spec:
+      initContainers:
+      - name: seed-database
+        image: lexmill99/scratch-pay:v5
+        command: ['sh', '-c', 'python manage.py stats']
+        envFrom:
+        - secretRef:
+            name: mysecret      
+      containers:      
+      - image: lexmill99/scratch-pay:v5
+        name: scratch-pay
+        envFrom:
+        - secretRef:
+            name: mysecret
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /v1/users
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1   
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /v1/users
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1    
+        resources:
+          limits:
+            cpu: 100m
+            memory: 1Gi
+          #to be set based on prometheus metrics
+          requests:
+            cpu: 20m
+            memory: 5Mi

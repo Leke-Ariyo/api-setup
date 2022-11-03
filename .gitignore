@@ -1,0 +1,3 @@
+env
+*.pyc
+user-managment-REST/profiles_api/management/.DS_Store

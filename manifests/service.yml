@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: scratch-pay
+  name: scratch-pay
+  namespace: minor
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: scratch-pay
+status:
+  loadBalancer: {}
+                                                                           
