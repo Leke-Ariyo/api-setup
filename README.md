@@ -1,6 +1,6 @@
 # Project Overview
 
-This project develops an API from the definition in https://gitlab.scratchpay.com/-/snippets/42/raw/main/swagger.yaml, stores the user data, validates the workflow and containerises the application.
+This project develops an API from the definition stores the user data, validates the workflow and containerises the application.
 
 ## Workflow
 user-management-REST/ is the WORKING DIRECTORY
